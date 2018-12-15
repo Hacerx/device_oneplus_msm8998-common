@@ -52,13 +52,12 @@ public class ShitPanelSettings extends PreferenceActivity {
     public static final String KEY_SRGB_SWITCH = "srgb";
     public static final String KEY_HBM_SWITCH = "hbm";
     public static final String KEY_DCI_SWITCH = "dci";
-
+    public static final String KEY_NIGHT_SWITCH = "night";
+    public static final String KEY_ONEPLUS_SWITCH = "oneplus";
+    
     private VibratorStrengthPreference mVibratorStrength;
-    /*private TwoStatePreference mTapToWakeSwitch;*/
-    private TwoStatePreference mSRGBModeSwitch;
     private TwoStatePreference mHBMModeSwitch;
-    private TwoStatePreference mDCIModeSwitch;
-
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,17 +71,8 @@ public class ShitPanelSettings extends PreferenceActivity {
         /*mTapToWakeSwitch = (TwoStatePreference) findPreference(KEY_TAPTOWAKE_SWITCH);
         mTapToWakeSwitch.setOnPreferenceChangeListener(new TapToWakeSwitch());*/
 
-        mSRGBModeSwitch = (TwoStatePreference) findPreference(KEY_SRGB_SWITCH);
-        mSRGBModeSwitch.setOnPreferenceChangeListener(new SRGBModeSwitch());
-
         mHBMModeSwitch = (TwoStatePreference) findPreference(KEY_HBM_SWITCH);
         mHBMModeSwitch.setOnPreferenceChangeListener(new HBMModeSwitch());
 
-        mDCIModeSwitch = (TwoStatePreference) findPreference(KEY_DCI_SWITCH);
-        boolean isPanelSupported = DCIModeSwitch.isSupportedPanel();
-        if (isPanelSupported) {
-            mDCIModeSwitch.setOnPreferenceChangeListener(new DCIModeSwitch());
         }
-
-    }
 }
