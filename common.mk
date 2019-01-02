@@ -341,6 +341,10 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# OneplusShit
+PRODUCT_PACKAGES += \
+    OneplusShit 
+
 # Prebuilts
 PRODUCT_PACKAGES += \
     OnePlusCamera \
@@ -492,6 +496,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Inherit from oppo-common
-$(call inherit-product, device/oppo/common/common.mk)
