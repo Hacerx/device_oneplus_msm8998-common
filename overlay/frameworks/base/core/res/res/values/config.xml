@@ -604,4 +604,8 @@
 
     <!-- If true, the display will be shifted around in ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>
+
+    <!-- Whether to enable OP5/T cam hack -->
+    <bool name="config_enableOPcamhack">true</bool>
+
 </resources>
