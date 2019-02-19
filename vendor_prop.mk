@@ -282,7 +282,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
 
 # HAL1 Packages
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.whatsapp
 
 # VoLTE Prop
 persist.dbg.ims_volte_enable=1
