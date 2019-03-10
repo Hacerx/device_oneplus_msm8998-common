@@ -626,4 +626,5 @@
     <!-- Whether to enable OP5/T cam hack -->
     <bool name="config_enableOPcamhack">true</bool>
 
+    <bool name="config_oldQtiTelephony">false</bool>
 </resources>
