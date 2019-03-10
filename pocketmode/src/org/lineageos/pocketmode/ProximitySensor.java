@@ -24,7 +24,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
 
-import com.android.internal.util.xtended.FileUtils;
+import com.android.internal.util.colt.FileUtils;
 
 public class ProximitySensor implements SensorEventListener {
 
