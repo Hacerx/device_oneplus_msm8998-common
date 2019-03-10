@@ -627,4 +627,7 @@
     <bool name="config_enableOPcamhack">true</bool>
 
     <bool name="config_oldQtiTelephony">false</bool>
+
+    <!-- Does device supports fast charging ? -->
+    <bool name="config_FastChargingLedSupported">true</bool> 
 </resources>
