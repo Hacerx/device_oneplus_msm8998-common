@@ -26,6 +26,7 @@ import android.provider.Settings;
 import android.text.TextUtils;
 
 import com.oneplus.shit.settings.DCIModeSwitch;
+import com.oneplus.shit.settings.HBMModeSwitch;
 import com.oneplus.shit.settings.DisplayCalibration;
 import com.oneplus.shit.settings.SRGBModeSwitch;
 import com.oneplus.shit.settings.VibratorStrengthPreference ;
@@ -57,6 +58,11 @@ public class BootReceiver extends BroadcastReceiver {
 
         boolean enabled = sharedPrefs.getBoolean(ShitPanelSettings.KEY_SRGB_SWITCH, false);
         restore(SRGBModeSwitch.getFile(), enabled);
+
+        enabled = sharedPrefs.getBoolean(ShitPanelSettings.KEY_HBM_SWITCH, false);
+        if (enabled) {
+            restore(HBMModeSwitch.getFile(), "2");
+        }
 
         enabled = sharedPrefs.getBoolean(ShitPanelSettings.KEY_DCI_SWITCH, false);
         restore(DCIModeSwitch.getFile(), enabled);
