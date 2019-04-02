@@ -90,7 +90,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.oneplus.camera,com.android.camera,org.lineageos.snap \
+    vendor.camera.aux.packagelist=com.oneplus.camera,com.android.camera,com.google.android.GoogleCamera \
+    camera.hal1.packagelist=com.whatsapp,com.android.camera,com.android.camera2,com.instagram.android \
+    vendor.camera.hal1.packagelist=com.whatsapp,com.android.camera,com.android.camera2,com.instagram.android \
     persist.camera.mobicat=2 \
     persist.camera.stats.debugexif=3080192 \
     persist.ts.rtmakeup=false
@@ -281,9 +283,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
 
-# HAL1 Packages
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
-
 # VoLTE Prop
 persist.dbg.ims_volte_enable=1
 persist.dbg.volte_avail_ovr=1
@@ -303,7 +302,12 @@ ro.config.hw_fast_dormancy=1
 persist.debug.force_burn_in=true
 ro.gps.agps_provider=1
 
+# Boot
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.vendor.shutdown.waittime=500
+
 # Fling
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.min.fling_velocity=160 \
     ro.max.fling_velocity=20000
+
