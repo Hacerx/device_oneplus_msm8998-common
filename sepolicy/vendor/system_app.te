@@ -13,3 +13,6 @@ allow system_app sysfs_battery_supply:dir search;
 allow system_app sysfs_leds:file rw_file_perms;
 allow system_app sysfs_vibrator:file rw_file_perms;
 allow system_app sysfs_vibrator:dir search;
+
+allow system_app sysfs:file write;
+allow system_app sysfs_switch:dir search;
